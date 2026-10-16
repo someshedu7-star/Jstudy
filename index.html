@@ -9,9 +9,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .header-credit{display:inline-flex;align-items:center;gap:4px;padding:6px 9px;border:1px solid #6c4aa2;border-radius:6px;background:linear-gradient(110deg,#281d38,#1b1722);color:#cfc0e9;font-size:9px;white-space:nowrap;box-shadow:0 0 14px #8b5cf61c}
+    .header-credit strong{color:#c5a9ff;font-weight:700}
+    .header-credit em{color:#f0b76f;font-style:normal;font-weight:700}
+    @media(max-width:760px){.header-credit{display:inline-flex;max-width:132px;overflow:hidden;font-size:8px;padding:5px 6px;gap:3px}}
+    @media(max-width:380px){.header-credit{max-width:105px}.header-credit em{display:none}}
+  </style>
 </head>
 <body>
-  <span class="header-credit">Developed by Somesh Bali</span>
   <div class="app-shell">
     <aside class="sidebar" id="sidebar">
       <a class="brand" href="#dashboard" aria-label="Study OS home"><span class="brand-mark">s</span><span>study<span class="brand-light">os</span></span><span class="brand-badge">BETA</span></a>
@@ -37,7 +43,7 @@
       <div class="sidebar-bottom"><div class="streak-card"><span class="streak-flame">♨</span><div><strong id="streak-value">0 day streak</strong><small>Keep showing up!</small></div><span class="streak-dots">● ● ●</span></div><div class="profile"><div class="avatar" id="avatar">S</div><div class="profile-info"><strong id="profile-name">Student</strong><small>Personal account</small></div><button class="icon-button" aria-label="Profile menu">···</button></div></div>
     </aside>
     <main class="main-area">
-      <header class="topbar"><button class="mobile-menu icon-button" id="mobile-menu" aria-label="Open menu">☰</button><div class="crumb"><span>Workspace</span><b>/</b><strong id="page-crumb">Dashboard</strong></div><div class="topbar-right"><span class="today" id="today-label"></span><button class="search-trigger" id="search-open"><span>⌕</span> Search <kbd>⌘ K</kbd></button><button class="top-add" id="quick-add"><span>＋</span> Quick add</button><button class="icon-button bell" aria-label="Reminders">♧<i></i></button><div class="avatar small-avatar">S</div></div></header>
+      <header class="topbar"><button class="mobile-menu icon-button" id="mobile-menu" aria-label="Open menu">☰</button><div class="crumb"><span>Workspace</span><b>/</b><strong id="page-crumb">Dashboard</strong></div><div class="topbar-right"><span class="header-credit">Developed by: <strong>@Somesh Bali</strong> <em>(A Failure)</em></span><span class="today" id="today-label"></span><button class="search-trigger" id="search-open"><span>⌕</span> Search <kbd>⌘ K</kbd></button><button class="top-add" id="quick-add"><span>＋</span> Quick add</button><button class="icon-button bell" aria-label="Reminders">♧<i></i></button><div class="avatar small-avatar">S</div></div></header>
       <div class="content" id="content" tabindex="-1"></div>
     </main>
   </div>
@@ -48,6 +54,5 @@
   <input type="file" id="audio-file" accept="audio/*" hidden multiple>
   <input type="file" id="import-file" accept="application/json,.json" hidden>
   <script src="app.js"></script>
-  <footer class="site-credit">© 2026 Study OS · Developed by Somesh Bali</footer>
 </body>
 </html>
